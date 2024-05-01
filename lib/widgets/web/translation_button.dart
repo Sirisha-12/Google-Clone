@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:google_clone/widgets/web/language_text.dart';
-// import 'package:google_clone/widgets/language_text.dart';
 
 class TranslationButtons extends StatelessWidget {
   const TranslationButtons({Key? key}) : super(key: key);

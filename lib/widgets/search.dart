@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_clone/colors.dart';
 import 'package:google_clone/screens/search_screen.dart';
-// import 'package:google_clone/screens/search_screen.dart';
 
 class Search extends StatelessWidget {
   const Search({Key? key}) : super(key: key);
@@ -24,8 +23,6 @@ class Search extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           SizedBox(
-            // another way of doing things
-            // also everything in search bar is same except this width so just use this
             width: size.width > 768 ? size.width * 0.4 : size.width * 0.9,
             child: TextFormField(
               keyboardType: TextInputType.text,

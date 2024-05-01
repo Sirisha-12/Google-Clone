@@ -22,11 +22,9 @@ class SearchResultComponent extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.start,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // showing the link at the top first
         Text(
           link,
         ),
-        // showing the text to display as header with link
         Padding(
           padding: const EdgeInsets.only(bottom: 8.0),
           child: LinkText(
@@ -43,7 +41,6 @@ class SearchResultComponent extends StatelessWidget {
             },
           ),
         ),
-        // showing the meta data or the description of the wbesite
         Text(
           desc,
           style: const TextStyle(

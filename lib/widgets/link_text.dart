@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-// displays the title and link of the search results
 class LinkText extends StatefulWidget {
   final String link;
   final String text;

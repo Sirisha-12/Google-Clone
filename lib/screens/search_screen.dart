@@ -1,14 +1,3 @@
-// import 'package:flutter/material.dart';
-
-// class SearchScreen extends StatelessWidget {
-//   const SearchScreen({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return const Scaffold();
-//   }
-// }
-
 import 'package:flutter/material.dart';
 import 'package:google_clone/colors.dart';
 import 'package:google_clone/services/api_service.dart';
@@ -32,8 +21,7 @@ class SearchScreen extends StatelessWidget {
         FocusScope.of(context).unfocus();
       },
       child: Title(
-        // for the title of the website
-        color: Colors.blue, // This is required
+        color: Colors.blue,
         title: searchQuery,
         child: Scaffold(
           body: SingleChildScrollView(
@@ -41,9 +29,7 @@ class SearchScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                // for the header part of the website showing search text field
                 const WebSearchHeader(),
-                // for showing ALL, IMAGES, MAPS etc tabs
                 Padding(
                   padding:
                       EdgeInsets.only(left: size.width <= 768 ? 10 : 150.0),
@@ -56,7 +42,6 @@ class SearchScreen extends StatelessWidget {
                   height: 0,
                   thickness: 0,
                 ),
-                // showing search results
                 FutureBuilder<Map<String, dynamic>>(
                   future: ApiService().fetchData(
                       context: context, queryTerm: searchQuery, start: start),
@@ -67,7 +52,6 @@ class SearchScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          // showing the time it took to fetch results
                           Container(
                             padding: EdgeInsets.only(
                                 left: size.width <= 768 ? 10 : 150, top: 12),
@@ -79,7 +63,7 @@ class SearchScreen extends StatelessWidget {
                               ),
                             ),
                           ),
-                          // displaying the results
+
                           ListView.builder(
                             physics: const NeverScrollableScrollPhysics(),
                             shrinkWrap: true,
@@ -141,7 +125,6 @@ class SearchScreen extends StatelessWidget {
                                       color: blueColor,
                                     ),
                                   ),
-                                  // if start is 0, we are on the first page
                                   onPressed: () {
                                     Navigator.push(
                                       context,

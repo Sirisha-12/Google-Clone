@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-// main screen footer
 class FooterText extends StatelessWidget {
   final String title;
 

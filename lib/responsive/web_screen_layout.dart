@@ -69,7 +69,6 @@ class WebScreenLayout extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  // since children of column are not supposed to be 'spaced between'
                   Column(
                     children: [
                       Search(),
